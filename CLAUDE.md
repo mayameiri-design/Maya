@@ -1,7 +1,8 @@
 # כללי עריכה קבועים
 
-בתיקייה הזו עובדים על עריכת סרטונים. השתמש בסקיל `video-editor` (`.claude/skills/video-editor/SKILL.md`) בכל שיחה שקשורה לסרטונים, ודבר עברית.
-פרופיל הסגנון של המשתמשת נשמר ב-`style-profile.md` (נוצר אחרי שלב השאלות הראשוני).
+בתיקייה הזו עובדים על עריכת סרטונים. השתמש בסקיל `maya-pro-editor` ("עורך מקצועי של מאיה", `.claude/skills/maya-pro-editor/SKILL.md`) בכל שיחה שקשורה לסרטונים, ודבר עברית.
+לרעיונות תוכן, קופירייטינג והצעת רעיון בוקר - הסקיל `creative-manager`.
+פרופיל הסגנון והמותג: `.claude/skills/maya-pro-editor/brand/`.
 
 1. פורמט: הפורמט שנבחר. אם הסרטון הגולמי בפורמט אחר - לשאול לפני התאמה; אף פעם לא לכווץ או למתוח.
 2. גרסה ראשונה = חיתוך בלבד, לאישור התוכן.
@@ -11,10 +12,12 @@
 6. לפני כל יצירה בכלי AI שעולה קרדיטים: פרומפט ועלות, ולחכות לאישור.
 7. לפני כל גרסה: לבדוק בעצמך את הפריימים סביב כל חיתוך.
 8. סגנון שאושר נשמר לכל הסרטונים הבאים.
-9. לפני כל התקנה: משפט על מה זה, ולחכות לאישור.
+9. לפני כל התקנה: משפט על מה זה, ולחכות לאישור (אלא אם מאיה ביקשה אותה במפורש).
 10. לפני העברה לקאפקאט: להזכיר לסגור אותו לגמרי ולחכות לאישור שנסגר.
+11. לא מרנדרים דברים כבדים (תלת-ממד, ריל מלא, כל הסגנונות) בלי שמאיה ביקשה. קודם סטילס לבחירה.
+12. מוסיקה רק עם רישיון מסחרי מתועד (הכלי `music.py` אוכף).
 
 ## Motion title system (`titles/`)
-Remotion project: 5 reusable 9:16 title styles (Hebrew RTL + English), Showreel, custom transitions.
-See `titles/README.md`. Rendering in the cloud sandbox: use `--concurrency=1` (3D scene stalls with parallel tabs).
-Remotion skills: `.claude/skills/remotion-*` (installed from remotion-dev/skills); official plugin `remotion@anthropic-plugin-directory` installed at user scope.
+Remotion project: 5 reusable 9:16 title styles (Hebrew RTL + English), Showreel, custom transitions. See `titles/README.md`.
+Rendering in the cloud sandbox: use `--concurrency=1` (3D scene stalls with parallel tabs).
+Remotion skills: `.claude/skills/remotion-*`; official plugin `remotion@anthropic-plugin-directory` installed at user scope.
