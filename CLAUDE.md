@@ -13,3 +13,8 @@
 8. סגנון שאושר נשמר לכל הסרטונים הבאים.
 9. לפני כל התקנה: משפט על מה זה, ולחכות לאישור.
 10. לפני העברה לקאפקאט: להזכיר לסגור אותו לגמרי ולחכות לאישור שנסגר.
+
+## Motion title system (`titles/`)
+Remotion project: 5 reusable 9:16 title styles (Hebrew RTL + English), Showreel, custom transitions.
+See `titles/README.md`. Rendering in the cloud sandbox: use `--concurrency=1` (3D scene stalls with parallel tabs).
+Remotion skills: `.claude/skills/remotion-*` (installed from remotion-dev/skills); official plugin `remotion@anthropic-plugin-directory` installed at user scope.
