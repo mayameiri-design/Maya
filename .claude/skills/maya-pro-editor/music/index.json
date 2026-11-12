@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "synthesized-in-session-bts-beat-120bpm",
+    "file": "synthesized-in-session-bts-beat-120bpm.wav",
+    "title": "BTS beat 120bpm",
+    "artist": "synthesized in-session",
+    "source": "generated with numpy for this project",
+    "license": "own-work",
+    "license_url": "",
+    "attribution": "",
+    "mood": [
+      "energetic",
+      "playful"
+    ],
+    "genre": "electronic",
+    "bpm": 120,
+    "duration_s": 15.5
+  }
+]
