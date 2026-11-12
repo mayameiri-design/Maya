@@ -33,5 +33,23 @@
     "genre": "phonk",
     "bpm": 150,
     "duration_s": 14.8
+  },
+  {
+    "id": "synthesized-in-session-bts-groove-100bpm",
+    "file": "synthesized-in-session-bts-groove-100bpm.wav",
+    "title": "BTS groove 100bpm",
+    "artist": "synthesized in-session",
+    "source": "generated with numpy for this project (mix includes ad speech)",
+    "license": "own-work",
+    "license_url": "",
+    "attribution": "",
+    "mood": [
+      "light",
+      "groovy",
+      "trendy"
+    ],
+    "genre": "pop-hiphop",
+    "bpm": 100,
+    "duration_s": 20.5
   }
 ]
