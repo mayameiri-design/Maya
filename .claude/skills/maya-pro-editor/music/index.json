@@ -15,5 +15,23 @@
     "genre": "electronic",
     "bpm": 120,
     "duration_s": 15.5
+  },
+  {
+    "id": "synthesized-in-session-bts-phonk-style-beat-150bpm",
+    "file": "synthesized-in-session-bts-phonk-style-beat-150bpm.wav",
+    "title": "BTS phonk-style beat 150bpm",
+    "artist": "synthesized in-session",
+    "source": "generated with numpy for this project (includes ad audio in mix; use stem separately)",
+    "license": "own-work",
+    "license_url": "",
+    "attribution": "",
+    "mood": [
+      "energetic",
+      "dark",
+      "trendy"
+    ],
+    "genre": "phonk",
+    "bpm": 150,
+    "duration_s": 14.8
   }
 ]
