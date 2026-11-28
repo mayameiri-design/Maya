@@ -1,0 +1,53 @@
+<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><title>סקיצה - חנוכה בצ'רי</title>
+<style>
+body{margin:0;background:#111;color:#eee;font-family:Rubik,Arial,sans-serif;padding:28px}
+h1{margin:0 0 4px;font-size:26px}p.s{margin:0 0 22px;color:#aaa;font-size:14px}
+.row{display:flex;gap:16px}
+.f{width:270px}.f .cap{font-size:13px;color:#ccc;margin-top:8px;line-height:1.5;min-height:60px}
+.f .n{color:#e8b64a;font-weight:700}
+.f svg{width:270px;height:480px;border:1px solid #333;border-radius:6px;display:block;background:#050506}
+.note{margin-top:20px;color:#999;font-size:13px;max-width:900px}
+</style></head><body>
+<h1>חנוכה בצ'רי - סקיצה ראשונה</h1>
+<p class="s">צללית כללית, לא דגם אמיתי. 9:16. בגרסה הסופית: דגמים אמיתיים מתמונות רשמיות של היבואן.</p>
+<svg id="defs" width="0" height="0" style="position:absolute;width:0;height:0;border:0;background:none"><defs>
+<radialGradient id="glow"><stop offset="0" stop-color="#ffd878" stop-opacity="1"/><stop offset="0.35" stop-color="#ffb43a" stop-opacity=".55"/><stop offset="1" stop-color="#ff9a1a" stop-opacity="0"/></radialGradient>
+<symbol id="car" viewBox="0 0 200 130">
+ <path d="M18 118 L18 74 Q18 60 32 56 L52 34 Q58 28 68 28 L132 28 Q142 28 148 34 L168 56 Q182 60 182 74 L182 118 Z" fill="#1b1c20" stroke="#3a3c44" stroke-width="2"/>
+ <path d="M58 56 L70 36 L130 36 L142 56 Z" fill="#0b0c0f"/>
+ <rect x="70" y="84" width="60" height="16" rx="4" fill="#0e0f12"/>
+ <rect x="28" y="112" width="144" height="8" rx="3" fill="#0b0b0d"/>
+ <rect x="30" y="68" width="34" height="10" rx="4" class="hl l"/>
+ <rect x="136" y="68" width="34" height="10" rx="4" class="hl r"/>
+</symbol></defs></svg>
+<div class="row" id="r"></div>
+<p class="note">הערות: (1) המבצע והמחיר - ממתינים לפרטים מהלקוח. (2) כתובת וטלפון - ממתינים. (3) הפנסים הם שכבה נפרדת בהפקה, כך שאפשר להוריד אותם. (4) מוסיקה: רק עם רישיון מסחרי.</p>
+<script>
+const NS='http://www.w3.org/2000/svg';
+function car(g,x,y,s,lit,flip){
+ const u=document.createElementNS(NS,'use');u.setAttribute('href','#car');
+ u.setAttribute('x',x);u.setAttribute('y',y);u.setAttribute('width',200*s);u.setAttribute('height',130*s);g.appendChild(u);
+ const hl=(cx)=>{const cy=y+73*s;
+  if(lit){const c=document.createElementNS(NS,'circle');c.setAttribute('cx',cx);c.setAttribute('cy',cy);c.setAttribute('r',Math.max(14*s,10));c.setAttribute('fill','url(#glow)');g.appendChild(c);}
+  const r=document.createElementNS(NS,'rect');r.setAttribute('x',cx-17*s);r.setAttribute('y',cy-5*s);r.setAttribute('width',34*s);r.setAttribute('height',10*s);r.setAttribute('rx',4*s);
+  r.setAttribute('fill',lit?'#fff3c4':'#1a1b1f');g.appendChild(r);};
+ hl(x+47*s);hl(x+153*s);
+}
+function t(g,txt,x,y,sz,fill,w){const e=document.createElementNS(NS,'text');e.textContent=txt;e.setAttribute('x',x);e.setAttribute('y',y);e.setAttribute('text-anchor','middle');e.setAttribute('font-size',sz);e.setAttribute('fill',fill||'#eee');e.setAttribute('font-weight',w||700);g.appendChild(e);}
+function row9(g,lit,y,s){const n=9;for(let i=0;i<n;i++){const x=5+i*28.5, arc=Math.abs(i-4)*3;
+  car(g,x-2,y+arc-(i==4?14:0),i==4?0.19:0.16,lit.includes(i),false);}}
+const F=[
+ {c:'0-2 שנ׳ · חושך. פנס אחד נדלק על רכב, אור זהב מתפשט על הצבע. דחיפה איטית פנימה.',d:g=>{car(g,35,150,1.0,false);const cy=150+73,cx=35+47;
+   const c=document.createElementNS(NS,'circle');c.setAttribute('cx',cx);c.setAttribute('cy',cy);c.setAttribute('r',70);c.setAttribute('fill','url(#glow)');g.appendChild(c);
+   const r=document.createElementNS(NS,'rect');r.setAttribute('x',cx-17);r.setAttribute('y',cy-5);r.setAttribute('width',34);r.setAttribute('height',10);r.setAttribute('rx',4);r.setAttribute('fill','#fff3c4');g.appendChild(r);
+   t(g,'שמונה לילות. שמונה פנסים.',135,380,17,'#f2d9a0');}},
+ {c:'2-6 · המצלמה מתרחקת: שורה של רכבים כמו חנוכייה, האמצעי גבוה (השמש). הראשון דולק.',d:g=>{row9(g,[8],200,1);t(g,'[כותרת הוק]',135,330,18,'#f2d9a0');}},
+ {c:'6-18 · הפנסים נדלקים אחד אחרי השני, מימין לשמאל. המצלמה גולשת לאורך השורה.',d:g=>{row9(g,[8,7,6,5,4],200,1);}},
+ {c:'18-25 · כולם דולקים. הכותרת עולה בחושך (MaskRise).',d:g=>{row9(g,[0,1,2,3,4,5,6,7,8],200,1);t(g,'חנוכה בצ׳רי',135,330,34,'#ffe3a6',800);t(g,'[המבצע]',135,368,18,'#f2d9a0');}},
+ {c:'25-30 · CTA: שם המוצג, כתובת וטלפון. לופ חוזר לפנס הראשון.',d:g=>{car(g,35,120,1.0,true);t(g,'[שם המוצג]',135,330,20,'#ffe3a6');t(g,'[כתובת · טלפון]',135,360,15,'#ccc',500);}}
+];
+const r=document.getElementById('r');
+F.forEach((f,i)=>{const d=document.createElement('div');d.className='f';
+ const s=document.createElementNS(NS,'svg');s.setAttribute('viewBox','0 0 270 480');f.d(s);
+ d.appendChild(s);const c=document.createElement('div');c.className='cap';c.innerHTML='<span class="n">פריים '+(i+1)+'</span><br>'+f.c;d.appendChild(c);r.appendChild(d);});
+</script></body></html>
